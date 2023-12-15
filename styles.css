@@ -1,0 +1,494 @@
+
+/*Class for the header, body and footer for all pages*/
+header{
+ background-color: rgb(246, 204, 255);
+ padding: 10px;
+ box-shadow: 0 2px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 10px;
+}
+
+.navbar {
+    float: right;
+}
+
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+body{
+background-color: rgb(255, 255, 255);
+align-items: center;
+justify-content: center;
+margin: 0;
+padding: 0;
+transition: background-color 0.5 ease;
+}
+
+section {
+    background-color: rgb(255, 249, 242);
+    min-height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+footer{
+    background-color: rgb(226, 226, 226);
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    section {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+h1{
+font-family: 'Times New Roman', Times, serif;
+font-size: 40px;
+font-weight: bolder;
+text-align: center;
+margin-right: 20px;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    margin-right: 20px;
+    }
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+p{
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+text-align: justify;
+}
+/*Class for the header, body and footer for all pages*/
+
+/*class for menu page*/
+
+.p2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center; 
+    text-decoration: underline;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+  
+.grid-item {
+  width: 300px;
+  height: 300px;
+  background-color: #ffedd3;
+  color: #000000;
+  border-radius: 5px;
+  overflow: hidden; /* Ensure images don't overflow the grid item */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item img {
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+  
+.grid-item:hover {
+    background-color: #ffa743;
+}
+
+.buy-button {
+    display: fill;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: #45a049;
+  }
+
+  /*end of class for menu page*/
+
+/*class for about us section*/
+
+p1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;   
+}
+
+.company-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.company-info {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin: 0 auto;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.order-now-button {
+    display: flex;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #006eff; /* Green background color */
+    color: white; /* White text color */
+    border: 1px solid #000000; /* Green border color */
+    border-radius: 4px; /* Rounded corners */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center;
+}
+
+/* Hover effect for the button */
+.order-now-button:hover {
+    background-color: #006eff; /* Darker green on hover */
+    border: 1px solid #006eff;
+}
+
+.image-section {
+    max-width: 100%; /* Set the maximum width of the section */
+    margin: 0 auto; /* Center the section on the page */
+}
+
+.image {
+    max-width: 70%; /* Set the maximum width of the image to 100% of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+
+/*class for about us section*/
+
+
+/*class for nav listing*/
+
+.sorting-list {
+    position: fixed;
+    left: 0;
+    top: 20%; /* Adjust the top position as needed */
+    background-color: #fff6ed;
+    padding: 10px;
+    border-right: 1px solid #ffffff;
+    transform: translateY();
+    z-index: 1000;
+}
+
+.sorting-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sorting-list li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #cccccc; /* Add a bottom border to each list item */
+}
+
+.sorting-list li:last-child {
+    border-bottom: none; /* Remove the border from the last list item to avoid a double border */
+}
+
+.sorting-list li:hover {
+    background-color: #f0f0f0; /* Add a background color on hover */
+}
+
+.content {
+    margin-left: 150px; /* Adjust this value to match the width of your sorting list */
+    padding: 16px;
+}
+
+/*end of class for nav listing*/
+
+/* class for the cart section*/
+#cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 238, 238);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+}
+
+#closeCart {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#showCart {
+    cursor: pointer;
+    position: fixed;
+    top: 150px;
+    right: 10px;
+    font-size: 35px;
+    color: blueviolet;
+}
+
+#cartBadge {
+    position: fixed;
+    top: 150px;
+    right: 10px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#checkoutButton {
+    background-color: #4CAF50; /* Green background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding for better appearance */
+    text-align: center; /* Center-align text */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.remove-btn {
+    background-color: #ff6666; /* Adjust the background color */
+    color: #000000; /* Adjust the text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff3333; 
+}
+
+#confirmationPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.yes-button, .no-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.yes-button {
+    background-color: green;
+    color: rgb(0, 0, 0);
+}
+
+.no-button {
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+
+#confirmationPopup button {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#confirmationPopup button.yes-button {
+    background-color: green;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+#confirmationPopup button.no-button {
+    background-color: blue;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+#returnToMenuBtn {
+    background-color: rgb(255, 61, 61); /* Green background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+#returnToMenuBtn:hover {
+    background-color: #c60505; /* Darker green on hover */
+}
+
+/* Style for Proceed Payment button */
+#proceedPaymentBtn {
+    background-color: #008CBA; /* Blue background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+#proceedPaymentBtn:hover {
+    background-color: #007AAB; /* Darker blue on hover */
+}
+
+#cancelOrderPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 220, 188);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup h2 {
+    color: #333;
+}
+
+.popup p {
+    color: #555;
+}
+
+.popup button {
+    background-color: #4caf50;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background-color: #00ff0d;
+}
+
+
+/* End of class for cart page*/

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <main>
+    <header>
+        <img class="img" src="Image\Dinesoft logo.jpg" alt="Dinesoft">
+        <h1 style="color: red;">DINESOFT SDN BHD</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section style="text-align: center;">
+        <h1>Payment Page</h1>
+
+        <h2>Items in Cart</h2>
+        <div id="cartItems"></div>
+
+        <h2 style="text-align: center; font-weight: bolder;">TOTAL PRICE</h2>
+        <p id="totalPrice" style="text-align: center;"></p>
+    
+        <!-- Payment method selection -->
+        <h2 style="color: blueviolet;">Select Your Pickup Method</h2>
+        <form style="text-align: center;" id="paymentForm">
+            <label>
+                <input type="radio" name="paymentMethod" value="selfPickup" checked>
+                Self Pickup
+            </label>
+    
+            <label>
+                <input type="radio" name="paymentMethod" value="delivery">
+                Delivery
+            </label>
+
+            <button id="returnToMenuBtn" type="button" onclick="returnToMenu()">Clear All Item</button>
+            <button id="proceedPaymentBtn" type="button" onclick="processPayment()">Proceed Order</button>
+        </form>
+
+        <div id="cancelOrderPopup">
+            <p>Are you sure you want to cancel your order?</p>
+            <button class="yes-button" onclick="returnToMenuConfirmed()">Yes</button>
+            <button class="no-button" onclick="hideCancelOrderPopup()">No</button>
+        </div>
+
+        <div id="thankYouPopup" class="popup">
+            <div class="popup-content">
+                <h2>Thank You For Your Order</h2>
+                <p style="text-align: center;">Please Pay To The Casher/Delivery Workers After You Receive Your Food</p>
+                <button onclick="returnToMenu()">Return To Menu</button>
+            </div>
+        </div>
+
+        <script> 
+         function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+// Function to display items in the cart
+function displayCartItems(cart) {
+    const cartItemsContainer = document.getElementById('cartItems');
+
+    cartItemsContainer.innerHTML = '';
+
+    cart.forEach(item => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart-item');
+
+        // Create an image element
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.name;
+
+        // Append image to the cart item div
+        cartItemDiv.appendChild(img);
+
+        // Display item details
+        const itemDetails = document.createElement('div');
+        itemDetails.style.display = 'flex';
+        itemDetails.style.flexDirection = 'column';
+        itemDetails.style.alignItems = 'center';
+
+        itemDetails.innerHTML = `
+            <p><strong>${item.name}</strong></p>
+            <p>Price: RM ${item.price.toFixed(2)}</p>
+            <p>Quantity: ${item.quantity}</p>
+        `;
+
+        // Append item details to the cart item div
+        cartItemDiv.appendChild(itemDetails);
+
+        // Append the cart item div to the container
+        cartItemsContainer.appendChild(cartItemDiv);
+    });
+}
+
+// Get cart data from the URL
+const cartData = getParameterByName('cart');
+let cart = [];
+
+try {
+    // Attempt to parse the cart data as JSON
+    cart = cartData ? JSON.parse(decodeURIComponent(cartData)) : [];
+
+    // Check if the parsed data is an array
+    if (!Array.isArray(cart)) {
+        console.error('Invalid cart data:', cartData);
+        // Handle the error appropriately (e.g., show a message to the user)
+        cart = [];
+    }
+} catch (error) {
+    console.error('Error parsing cart data:', error);
+    // Handle the error appropriately (e.g., show a message to the user)
+    cart = [];
+}
+
+// Display items when the page loads
+window.onload = () => displayCartItems(cart);
+
+// Function to handle payment processing
+function processPayment() {
+    const selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+    // Display an alert (you can remove this if not needed)
+    alert(`Payment processed using ${selectedPaymentMethod}!`);
+
+    // Call the function to show the thank you popup
+    showThankYouPopup();
+}
+
+function displayTotalPrice(cart) {
+const totalPriceElement = document.getElementById('totalPrice');
+let totalPrice = 0;
+
+// Calculate the total price by summing up individual item prices
+cart.forEach(item => {
+    totalPrice += item.price * item.quantity;
+});
+
+// Display the total price
+totalPriceElement.textContent = `Total Price: RM ${totalPrice.toFixed(2)}`;
+}
+
+    // Function to hide the confirmation popup
+    function hideCancelOrderPopup() {
+        const cancelOrderPopup = document.getElementById('cancelOrderPopup');
+        cancelOrderPopup.style.display = 'none';
+    }
+
+    // Function to return to the menu when the user confirms
+    function returnToMenuConfirmed() {
+        hideCancelOrderPopup();
+        window.location.href = 'menu.html';
+    }
+
+    // Function to handle the "Return to Menu" button
+    function returnToMenu() {
+    console.log('Return to Menu button clicked');
+    showCancelOrderPopup();
+}
+
+function showCancelOrderPopup() {
+    const cancelOrderPopup = document.getElementById('cancelOrderPopup');
+    cancelOrderPopup.style.display = 'block';
+}
+
+function hideCancelOrderPopup() {
+    const cancelOrderPopup = document.getElementById('cancelOrderPopup');
+    cancelOrderPopup.style.display = 'none';
+}
+
+function returnToMenuConfirmed() {
+    console.log('Returning to menu confirmed');
+    hideCancelOrderPopup();
+    window.location.href = 'menu.html';
+}
+
+function handleOkButtonClick() {
+    closeThankYouPopup();
+    returnToMenu();
+}
+
+function showThankYouPopup() {
+    const thankYouPopup = document.getElementById('thankYouPopup');
+    thankYouPopup.style.display = 'block';
+
+    // Add an event listener to the "Ok" button in the popup
+    const okButton = document.querySelector('#thankYouPopup button');
+    okButton.addEventListener('click', handleOkButtonClick);
+}
+
+function closeThankYouPopup() {
+    const thankYouPopup = document.getElementById('thankYouPopup');
+    thankYouPopup.style.display = 'none';
+}
+
+function returnToMenu() {
+    window.location.href = 'menu.html';
+}
+
+// Display items and total price when the page loads
+window.onload = () => {
+    // Display items in the cart and total price when the page loads
+    displayCartItems(cart);
+    displayTotalPrice(cart);
+};
+    
+    </script>
+            
+    </section>
+
+    </main>
+    </body>
+
+    <footer>
+        <h3>Copyright 2023 &copy; Dinesoft Sdn Bhd. All rights reserved.<br><strong> Point of Sales System | Malaysia POS System Supplier | POS Software | F & B System | Retail System </strong></h3>
+        <p class="p2">Contact Us: <a href="whatsapp://send?phone=+60123977166"> Dinesoft Sdn Bhd </a></p>
+    </footer>
+
+    </html>

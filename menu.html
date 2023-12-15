@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic E-commerce Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <header>
+        <img src="Image\Dinesoft logo.jpg" alt="Dinesoft">
+        <h1 style="color: red;">DINESOFT SDN BHD</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<body>
+
+    <div class="sorting-list">
+        <ul>
+            <li data-target="Nasi">Nasi</li>
+            <li data-target="Mee">Mee</li>
+            <li data-target="MH">Mee Hoon</li>
+            <li data-target="Maggie">Maggie</li>
+            <li data-target="KT">Kuey Teow</li>
+            <li data-target="Ayam">Ayam</li>
+            <li data-target="Daging">Daging</li>
+            <li data-target="Air">Minuman</li>
+        </ul>
+    </div>
+
+    <h1 style="text-decoration-line: underline; text-decoration-color: black;">MENU</h1>
+    <section id="Nasi">
+        <head>
+            <h1 style="color: blueviolet;">NASI</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="1" data-item-name="Nasi Putih" data-item-price="1.50" data-item-image="Image\Nasi\Nasi Putih.jpg">Nasi Putih</h2>
+            <img src="Image\Nasi\Nasi Putih.jpg" alt="NasiPutih">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 1.50</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="2" data-item-name="Nasi Goreng Biasa" data-item-price="6.00" data-item-image="Image\Nasi\Nasi Goreng Biasa.jpg">Nasi Goreng Biasa</h2>
+            <img src="Image\Nasi\Nasi Goreng Biasa.jpg" alt="NGBiasa">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 6.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="3" data-item-name="Nasi Goreng Ayam" data-item-price="8.50" data-item-image="Image\Nasi\Nasi Goreng Ayam.jpg">Nasi Goreng Ayam</h2>
+            <img src="Image\Nasi\Nasi Goreng Ayam.jpg" alt="NGAyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.50</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="4" data-item-name="Nasi Goreng Daging" data-item-price="8.50" data-item-image="Image\Nasi\Nasi Goreng Daging.jpg">Nasi Goreng Daging</h2>
+            <img src="Image\Nasi\Nasi Goreng Daging.jpg" alt="NGDaging">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.50</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="5" data-item-name="Nasi Goreng Ikan Masin" data-item-price="7.50" data-item-image="Image\Nasi\Nasi Goreng Ikan Masin.jpg">Nasi Goreng Ikan Masin</h2>
+            <img src="Image\Nasi\Nasi Goreng Ikan Masin.jpg" alt="NGIMasin">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 7.50</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="6" data-item-name="Nasi Goreng Cina" data-item-price="7.00" data-item-image="Image\Nasi\Nasi Goreng Cina.jpg">Nasi Goreng Cina</h2>
+            <img src="Image\Nasi\Nasi Goreng Cina.jpg" alt="NGCina">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 7.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="7" data-item-name="Nasi Goreng Kampung" data-item-price="8.00" data-item-image="Image\Nasi\Nasi Goreng Kampung.jpg">Nasi Goreng Kampung</h2>
+            <img src="Image\Nasi\Nasi Goreng Kampung.jpg" alt="NGKampung">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="8" data-item-name="Nasi Goreng Pattaya" data-item-price="8.00" data-item-image="Image\Nasi\Nasi Goreng Pattaya.jpg">Nasi Goreng Pattaya</h2>
+            <img src="Image\Nasi\Nasi Goreng Pattaya.jpg" alt="NGPattaya">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="9" data-item-name="Nasi Goreng Paprik Daging" data-item-price="9.00" data-item-image="Image\Nasi\Nasi Goreng Paprik Daging.jpg">Nasi Goreng Paprik Daging</h2>
+            <img src="Image\Nasi\Nasi Goreng Paprik Daging.jpg" alt="NGPDaging">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 9.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="10" data-item-name="Nasi Goreng Paprik Ayam" data-item-price="9.00" data-item-image="Image\Nasi\Nasi Goreng Paprik Ayam.jpg">Nasi Goreng Paprik Ayam</h2>
+            <img src="Image\Nasi\Nasi Goreng Paprik Ayam.jpg" alt="NGPAyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 9.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="11" data-item-name="Nasi Goreng USA" data-item-price="10.00" data-item-image="Image\Nasi\Nasi Goreng USA.jpg">Nasi Goreng USA</h2>
+            <img src="Image\Nasi\Nasi Goreng USA.jpg" alt="NGUSA">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 10.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="12" data-item-name="Nasi Goreng Seafood" data-item-price="12.00" data-item-image="Image\Nasi\Nasi Goreng Seafood.jpg">Nasi Goreng Seafood</h2>
+            <img src="Image\Nasi\Nasi Goreng Seafood.jpg" alt="NGPSeafood">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 12.00</p>
+        </div>
+    </section>
+    </section>
+
+    <section id="Mee">
+        <head>
+            <h1 style="color: blueviolet;">MEE</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="13" data-item-name="Mee Goreng" data-item-price="5.00" data-item-image="Image\Mee\Mee Goreng.jpg">Mee Goreng</h2>
+            <img src="Image\Mee\Mee Goreng.jpg" alt="MeeGoreng">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 5.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="14" data-item-name="Mee Bandung" data-item-price="8.00" data-item-image="Image\Mee\Mee Bandung.jpg">Mee Bandung</h2>
+            <img src="Image\Mee\Mee Bandung.jpg" alt="MeeBandung">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="15" data-item-name="Mee Kari" data-item-price="8.00" data-item-image="Image\Mee\Mee Kari.jpg">Mee Kari</h2>
+            <img src="Image\Mee\Mee Kari.jpg" alt="MeeKari">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 8.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="16" data-item-name="Mee Tulang" data-item-price="15.00" data-item-image="Image\Mee\Mee Tulang.jpg">Mee Tulang</h2>
+            <img src="Image\Mee\Mee Tulang.jpg" alt="MeeTulang">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 15.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="17" data-item-name="Mee Sotong" data-item-price="13.00" data-item-image="Image\Mee\Mee Sotong.jpg">Mee Sotong</h2>
+            <img src="Image\Mee\Mee Sotong.jpg" alt="MeeSotong">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 13.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="18" data-item-name="Mee Udang" data-item-price="13.00" data-item-image="Image\Mee\Mee Udang.jpg">Mee Udang</h2>
+            <img src="Image\Mee\Mee Udang.jpg" alt="MeeUdang">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 13.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="19" data-item-name="Mee Hailam" data-item-price="8.00" data-item-image="Image\Mee\Mee Hailam.jpg">Mee Hailam</h2>
+            <img src="Image\Mee\Mee Hailam.jpg" alt="MeeHailam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="20" data-item-name="Mee Sup" data-item-price="8.00" data-item-image="Image\Mee\Mee Sup.jpg">Mee Sup</h2>
+            <img src="Image\Mee\Mee Sup.jpg" alt="MeeSup">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="21" data-item-name="Mee Tomyam" data-item-price="8.00" data-item-image="Image\Mee\Mee Tomyam.jpg">Mee Tomyam</h2>
+            <img src="Image\Mee\Mee Tomyam.jpg" alt="MeeTM">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+    </section>
+    </section>
+
+
+    <section id="MH">
+        <head>
+            <h1 style="color: blueviolet;">MEE HOON</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="22" data-item-name="Mee Hoon Goreng" data-item-price="5.00" data-item-image="Image\Mee Hoon\Mee Hoon Goreng.jpg">Mee Hoon Goreng</h2>
+            <img src="Image\Mee Hoon\Mee Hoon Goreng.jpg" alt="MHGoreng">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 5.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="23" data-item-name="Mee Hoon Sup" data-item-price="8.00" data-item-image="Image\Mee Hoon\Mee Hoon Sup.jpg">Mee Hoon Sup</h2>
+            <img src="Image\Mee Hoon\Mee Hoon Sup.jpg" alt="MHSup">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="24" data-item-name="Mee Hoon Tomyam" data-item-price="8.00" data-item-image="Image\Mee Hoon\Mee Hoon Tomyam.jpg">Mee Hoon Tomyam</h2>
+            <img src="Image\Mee Hoon\Mee Hoon Tomyam.jpg" alt="MHTomyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="25" data-item-name="Mee Hoon Sup (Tulang)" data-item-price="15.00" data-item-image="Image\Mee Hoon\Mee Hoon Sup (Tulang).jpg">Mee Hoon Sup (Tulang)</h2>
+            <img src="Image\Mee Hoon\Mee Hoon Sup (Tulang).jpg" alt="MHSTulang">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 15.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="26" data-item-name="Mee Hoon Seafood" data-item-price="12.00" data-item-image="Image\Mee Hoon\Mee Hoon Seafood.jpg">Mee Hoon Seafood</h2>
+            <img src="Image\Mee Hoon\Mee Hoon Seafood.jpg" alt="MHSeafood">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 12.00</p2>
+        </div>
+    </section>
+    </section>
+
+    <section id="Maggie">
+        <head>
+            <h1 style="color: blueviolet;">MAGGIE</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="27" data-item-name="Maggie Goreng" data-item-price="5.00" data-item-image="Image\Maggie\Maggie goreng.jpg">Maggie Goreng</h2>
+            <img src="Image\Maggie\Maggie goreng.jpg" alt="MaggieGoreng">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 5.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="28" data-item-name="Maggie Kari (Kuah)" data-item-price="8.00" data-item-image="Image\Maggie\maggie kari.jpg">Maggie Kari (Kuah)</h2>
+            <img src="Image\Maggie\maggie kari.jpg" alt="MaggieKariK">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="29" data-item-name="Maggie Sup" data-item-price="8.00" data-item-image="Image\Maggie\maggie sup.jpg">Maggie Sup</h2>
+            <img src="Image\Maggie\maggie sup.jpg" alt="MaggieSup">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="30" data-item-name="Maggie Seafood" data-item-price="12.00" data-item-image="Image\Maggie\maggie seafood.jpg">Maggie Seafood</h2>
+            <img src="Image\Maggie\maggie seafood.jpg" alt="MaggieSeafood">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 12.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="31" data-item-name="Maggie Tomyam" data-item-price="12.00" data-item-image="Image\Maggie\maggie tomyam.jpg">Maggie Tomyam</h2>
+            <img src="Image\Maggie\maggie tomyam.jpg" alt="MaggieTomyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+    </section>
+    </section>
+
+    <section id="KT">
+        <head>
+            <h1 style="color: blueviolet;">KUEY TEOW</h1>
+        </head>
+    <section class="content-grid" id="KT">
+        <div class="grid-item">
+            <h2 data-item-id="32" data-item-name="Kuey Teow Goreng" data-item-price="5.00" data-item-image="Image\Kuey Tiaw\kuew tiaw goreng.jpg">Kuey Teow Goreng</h2>
+            <img src="Image\Kuey Tiaw\kuew tiaw goreng.jpg" alt="KTGoreng">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 5.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="33" data-item-name="Kuey Teow Sup" data-item-price="8.00" data-item-image="Image\Kuey Tiaw\kuey tiaw sup.jpg">Kuey Teow Sup</h2>
+            <img src="Image\Kuey Tiaw\kuey tiaw sup.jpg" alt="KTSup">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="34" data-item-name="Kuey Teow Tomyam" data-item-price="8.00" data-item-image="Image\Kuey Tiaw\Kuey tiaw tomyam.jpg">Kuey Teow Tomyam</h2>
+            <img src="Image\Kuey Tiaw\Kuey tiaw tomyam.jpg" alt="KTTomyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="35" data-item-name="Char Kuey Teow Biasa" data-item-price="8.00" data-item-image="Image\Kuey Tiaw\char kuey tiaw.jpg">Char Kuey Teow Biasa</h2>
+            <img src="Image\Kuey Tiaw\char kuey tiaw.jpg" alt="CKTBiasa">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 8.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="36" data-item-name="Char Kuey Teow Special" data-item-price="12.00" data-item-image="Image\Kuey Tiaw\char kuey tiaw special.jpg">Char Kuey Teow Special</h2>
+            <img src="Image\Kuey Tiaw\char kuey tiaw special.jpg" alt="CKTSpecial">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 12.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="37" data-item-name="Kuey Teow Kungfu" data-item-price="9.00" data-item-image="Image\Kuey Tiaw\kuey tiaw kungfu.jpg">Kuey Teow Kungfu</h2>
+            <img src="Image\Kuey Tiaw\kuey tiaw kungfu.jpg" alt="KTKungfu">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 9.00</p2>
+        </div>
+    </section>
+    </section>
+
+    <section id="Ayam">
+        <head>
+            <h1 style="color: blueviolet;">AYAM</h1>
+        </head>
+    <section class="content-grid" id="Ayam">
+        <div class="grid-item">
+            <h2 data-item-id="38" data-item-name="Ayam Goreng Kunyit" data-item-price="6.00" data-item-image="Image\Ayam\ayam kunyit.jpg"> Ayam Goreng Kunyit</h2>
+            <img src="Image\Ayam\ayam kunyit.jpg" alt="AyamKunyit">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="39" data-item-name="Ayam Masak Merah" data-item-price="6.00" data-item-image="Image\Ayam\masak merah.jpg"> Ayam Masak Merah</h2>
+            <img src="Image\Ayam\masak merah.jpg" alt="AyamMerah">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="40" data-item-name="Ayam Masak Kicap" data-item-price="6.00" data-item-image="Image\Ayam\masak kicap.jpg"> Ayam Masak Kicap</h2>
+            <img src="Image\Ayam\masak kicap.jpg" alt="AyamKicap">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="41" data-item-name="Sup Ayam" data-item-price="6.00" data-item-image="Image\Ayam\sup ayam.jpg">Sup Ayam</h2>
+            <img src="Image\Ayam\sup ayam.jpg" alt="SupAyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="42" data-item-name="Tomyam Ayam" data-item-price="6.00" data-item-image="Image\Ayam\masak kicap.jpg">Tomyam Ayam</h2>
+            <img src="Image\Ayam\tomyam ayam.jpg" alt="TomyamAyam">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+    </section>
+    </section>
+
+    <section id="Daging">
+        <head>
+            <h1 style="color: blueviolet;">DAGING</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="43" data-item-name="Daging Goreng Kunyit" data-item-price="6.00" data-item-image="Image\Daging\daging kunyit.jpg">Daging Goreng Kunyit</h2>
+            <img src="Image\Daging\daging kunyit.jpg" alt="DagingKunyit">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="44" data-item-name="Daging Masak Merah" data-item-price="6.00" data-item-image="Image\Daging\daging masak merah.jpg">Daging Masak Merah</h2>
+            <img src="Image\Daging\daging masak merah.jpg" alt="DagingMerah">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="45" data-item-name="Daging Masak Kicap" data-item-price="6.00" data-item-image="Image\Daging\daging masak kicap.jpg">Daging Masak Kicap</h2>
+            <img src="Image\Daging\daging masak kicap.jpg" alt="DagingKicap">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="46" data-item-name="Sup Daging" data-item-price="6.00" data-item-image="Image\Daging\sup daging.jpg">Sup Daging</h2>
+            <img src="Image\Daging\sup daging.jpg" alt="SupDaging">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="47" data-item-name="Tomyam Daging" data-item-price="6.00" data-item-image="Image\Daging\tomyam daging.jpg">Sup Daging</h2>
+            <img src="Image\Daging\tomyam daging.jpg" alt="TomyamDaging">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 6.00</p2>
+        </div>
+    </section>
+    </section>
+
+    <section id="Air">
+        <head>
+            <h1 style="color: blueviolet;">MINUMAN</h1>
+        </head>
+    <section class="content-grid">
+        <div class="grid-item">
+            <h2 data-item-id="48" data-item-name="Air Kosong" data-item-price="0.20" data-item-image="Image\Minuman\Air Kosong.jpg">Air Kosong</h2>
+            <img src="Image\Minuman\Air Kosong.jpg" alt="AirKosong">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 0.20</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="49" data-item-name="Teh (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Teh.jpg">Teh (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Teh.jpg" alt="Teh">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="50" data-item-name="Teh O (Panas/Sejuk)" data-item-price="1.50" data-item-image="Image\Minuman\Teh O.jpg">Teh O (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Teh O.jpg" alt="TehO">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 1.50</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="51" data-item-name="Teh O Limau (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Teh O Limau.jpg">Teh O Limau(Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Teh O Limau.jpg" alt="TehOLimau">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="52" data-item-name="Kopi (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Kopi.jpg">Kopi (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Kopi.jpg" alt="Kopi">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="53" data-item-name="Kopi O (Panas/Sejuk)" data-item-price="1.50" data-item-image="Image\Minuman\Kopi O.jpg">Kopi O (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Kopi O.jpg" alt="KopiO">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 1.50</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="54" data-item-name="Nescafe (Panas/Sejuk)" data-item-price="2.50" data-item-image="Image\Minuman\Nescafe.jpg">Nescafe (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Nescafe.jpg" alt="Nescafe">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.50</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="55" data-item-name="Bandung (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Bandung.jpg">Bandung (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Bandung.jpg" alt="Bandung">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="56" data-item-name="Sirap (Panas/Sejuk)" data-item-price="1.50" data-item-image="Image\Minuman\Sirap.jpg">Sirap (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Sirap.jpg" alt="Sirap">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 1.50</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="57" data-item-name="Sirap Limau (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Sirap Limau.jpg">Sirap Limau (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Sirap Limau.jpg" alt="SirapLimau">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="58" data-item-name="Horlick (Panas/Sejuk)" data-item-price="4.00" data-item-image="Image\Minuman\horlick.jpg">Horlick (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\horlick.jpg" alt="Horlick">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 4.00</p2>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="59" data-item-name="Barli (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Barli.jpg">Barli (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Barli.jpg" alt="Barli">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2">RM 2.00</p>
+        </div>
+
+        <div class="grid-item">
+            <h2 data-item-id="60" data-item-name="Limau (Panas/Sejuk)" data-item-price="2.00" data-item-image="Image\Minuman\Limau.jpg">Limau (Panas/Sejuk)</h2>
+            <img src="Image\Minuman\Limau.jpg" alt="Limau">
+            <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+            <p class="p2"> RM 2.00</p2>
+        </div>
+        </section>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="Addtocart.js"> </script>
+        <script src="scroll.js"> </script>
+
+        <div id="modalOverlay" onclick="toggleCart()"></div>
+    
+        <div id="showCart" onclick="toggleCart()">🛒</div>
+        <div id="cart">
+        <div id="closeCart" onclick="toggleCart()" style="text-decoration: double; color: red;">✖</div>
+        <h2 style="color: blueviolet;">CART</h2>
+        <ul id="cartItems"></ul>
+        <p style="text-align: center;"><span id="totalPrice">RM 0.00</span></p>
+        <div id="checkoutButton" onclick="checkout()">Checkout</div>
+    </div>
+    <div id="cartBadge"></div>
+
+    <script>
+        // Cart data
+        let cart = [];
+        let totalPrice = 0;
+    
+        // Function to add items to the cart
+        function addToCart(button) {
+            const item = button.parentNode;
+            const itemId = item.querySelector('h2').getAttribute('data-item-id');
+            const itemName = item.querySelector('h2').getAttribute('data-item-name');
+            const itemPrice = parseFloat(item.querySelector('h2').getAttribute('data-item-price'));
+            const itemImage = item.querySelector('h2').getAttribute('data-item-image');
+    
+            // Check if the item is already in the cart
+            const existingItem = cart.find(item => item.id === itemId);
+
+            saveCartToLocalStorage();
+    
+            if (existingItem) {
+                existingItem.quantity += 1; // Increment the quantity if the item is already in the cart
+            } else {
+                cart.push({ id: itemId, name: itemName, price: itemPrice, quantity: 1, image: itemImage });
+            }
+    
+            // Update the cart display
+            updateCart();
+    
+            // Update the cart badge
+            updateCartBadge();
+        }
+
+        function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+    
+        // Function to update the cart display
+        function updateCart() {
+    const cartItemsElement = document.getElementById('cartItems');
+    const totalElement = document.getElementById('totalPrice');
+
+    window.onload = () => {
+    // Retrieve cart data from localStorage
+    const storedCart = localStorage.getItem('cart');
+
+    // If there is stored data, update the cart variable
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+    }
+
+    // Display cart items
+    updateCart();
+};
+
+    // Clear the previous content
+    cartItemsElement.innerHTML = '';
+
+    // Populate the cart items
+    cart.forEach(item => {
+        const li = document.createElement('li');
+
+        // Create an image element
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.name;
+        img.style.width = '50px'; // Adjust the width as needed
+
+        // Append image to the list item
+        li.appendChild(img);
+
+        // Create a span for item details
+        const span = document.createElement('span');
+        span.textContent = `${item.name} x ${item.quantity} - RM ${item.price.toFixed(2)}`;
+
+        // Append span to the list item
+        li.appendChild(span);
+
+        // Create a remove button
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.className = 'remove-btn'; // Add a CSS class for styling
+        removeButton.onclick = () => removeItem(item.id); // Call removeItem function on click
+
+        // Append remove button to the list item
+        li.appendChild(removeButton);
+
+        // Append the list item to the cart
+        cartItemsElement.appendChild(li);
+    });
+
+    // Recalculate the total price with RM
+    totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    totalElement.textContent = `Total: RM ${totalPrice.toFixed(2)}`;
+}
+
+// Function to remove an item from the cart
+function removeItem(itemId) {
+    // Find the index of the item in the cart
+    const itemIndex = cart.findIndex(item => item.id === itemId);
+
+    // Remove the item from the cart
+    if (itemIndex !== -1) {
+        cart.splice(itemIndex, 1);
+    }
+
+    // Update the cart display
+    updateCart();
+
+    // Update the cart badge
+    updateCartBadge();
+
+    saveCartToLocalStorage();
+}
+    
+        // Function to update the cart badge
+        function updateCartBadge() {
+            const cartBadge = document.getElementById('cartBadge');
+            const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+            cartBadge.textContent = totalQuantity.toString();
+        }
+    
+        // Function to toggle the cart visibility
+        function toggleCart() {
+            const cartElement = document.getElementById('cart');
+            const modalOverlay = document.getElementById('modalOverlay');
+
+            if (cartElement.style.display === 'none' || cartElement.style.display === '') {
+            // Display cart and modal overlay
+            cartElement.style.display = 'block';
+            modalOverlay.style.display = 'block';
+            } 
+            else {
+            // Hide cart and modal overlay
+            cartElement.style.display = 'none';
+            modalOverlay.style.display = 'none';
+            }
+        }
+    
+        // Function to handle checkout
+        function checkout() {
+    showConfirmationPopup();
+}
+    </script>
+     
+     <div id="confirmationPopup">
+        <p>Are you sure you want to proceed with the order?</p>
+        <button class="yes-button" onclick="confirmOrder()">Yes</button>
+        <button class="no-button" onclick="cancelOrder()">No</button>
+    </div>
+    
+
+    <script>
+    // Function to show the confirmation popup
+function showConfirmationPopup() {
+    const confirmationPopup = document.getElementById('confirmationPopup');
+    confirmationPopup.style.display = 'block';
+}
+
+// Function to hide the confirmation popup
+function hideConfirmationPopup() {
+    const confirmationPopup = document.getElementById('confirmationPopup');
+    confirmationPopup.style.display = 'none';
+}
+
+// Function to handle the confirmation of the order
+function confirmOrder() {
+    // Hide the confirmation popup
+    hideConfirmationPopup();
+    const cartData = encodeURIComponent(JSON.stringify(cart));
+
+    // Redirect to the payment page
+    window.location.href = `payment.html?cart=${cartData}`; // Replace 'payment.html' with the actual URL of your payment page
+}
+
+// Function to cancel the order
+function cancelOrder() {
+    // Hide the confirmation popup
+    hideConfirmationPopup();
+}
+</script>
+
+</body>
+
+<footer>
+    <h3>Copyright 2023 &copy; Dinesoft Sdn Bhd. All rights reserved.<br><strong> Point of Sales System | Malaysia POS System Supplier | POS Software | F & B System | Retail System </strong></h3>
+    <p class="p2">Contact Us: <a href="whatsapp://send?phone=+60123977166"> Dinesoft Sdn Bhd </a></p>
+</footer>
+
+</html>
